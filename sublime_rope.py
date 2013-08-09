@@ -378,7 +378,7 @@ class SublimeRopeListener(sublime_plugin.EventListener):
         if (
             not view.match_selector(locations[0], 'source.python') or
             not (self.complete_as_you_type) or
-            SublimeRopeListener.user_requested
+            not SublimeRopeListener.user_requested
         ):
             return []
 
